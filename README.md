@@ -246,9 +246,9 @@ public static void SubArrays(int numbers[]) {
     int tp = 0;
     for(int i = 0; i < numbers.length; i++) {
         int start = numbers[i];
-        for(int j = i+1; j < numbers.length; j++) {
+        for(int j = i; j < numbers.length; j++) {
             int end = numbers[j];
-            for(int k = i; k < j; k++) {
+            for(int k = i; k <= j; k++) {
                 System.out.print(numbers[k] + " ");
                 tp++;
             }
@@ -268,9 +268,9 @@ public static void MaxSumSubArray(int numbers[]) {
     int currSum = 0;
     int MaxSum = Integer.MIN_VALUE;
     for(int i = 0; i < numbers.length; i++) {
-        for(int j = i+1; j < numbers.length; j++) {
+        for(int j = i; j < numbers.length; j++) {
             currSum = 0;
-            for(int k = i; k < j; k++) {
+            for(int k = i; k <= j; k++) {
                 currSum += numbers[k];
             }
             System.out.println("current sum is : "+currSum + " ");
